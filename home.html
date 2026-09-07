@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luckworth | Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <div class="avatar-wrapper">
+                    <img src="portfol.jpg" alt="Luckworth" class="avatar-img">
+                    <div class="status-dot"></div>
+                </div>
+                <div class="logo-text">Luckworth<span>.lol</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="home.html" class="active">Home</a>
+                <a href="aboutme.html">About</a>
+                <a href="projects.html">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-center">
+        <div class="status-badge">
+            <span class="pulse-dot"></span> Beep bop Boop :o
+        </div>
+        <h1>Hey, I'm <span>Luckworth</span></h1>
+        <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">
+            Self-taught 15yr old developer building stuff idk.
+        </p>
+        <div class="btn-group">
+            <a href="projects.html" class="btn btn-primary">View Projects</a>
+            <a href="aboutme.html" class="btn btn-secondary">About Me</a>
+        </div>
+    </main>
+
+    <!-- Custom Audio Player Widget -->
+    <div class="audio-widget glass-card" id="audio-widget">
+        <audio id="audio-player" src="neonguts.mp3" preload="metadata" loop></audio>
+        
+        <div class="player-main">
+            <div class="disc-wrapper" id="disc-icon">
+                <i class="fa-solid fa-compact-disc"></i>
+            </div>
+            <div class="track-details">
+                <div class="track-name">Neon Guts</div>
+                <div class="track-status">
+                    <div class="equalizer" id="equalizer">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span id="status-text">Paused</span>
+                </div>
+            </div>
+            <button id="play-btn" class="play-btn" aria-label="Play Music">
+                <i class="fa-solid fa-play"></i>
+            </button>
+        </div>
+
+        <div class="player-controls">
+            <span id="current-time" class="time-text">0:00</span>
+            <input type="range" id="seek-bar" class="slime-slider" value="0" min="0" max="100">
+            <span id="total-time" class="time-text">0:00</span>
+            
+            <button id="mute-btn" class="mute-btn" aria-label="Mute">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <input type="range" id="volume-bar" class="slime-slider vol-slider" value="40" min="0" max="100">
+        </div>
+    </div>
+
+    <!-- Persistent Music Engine Link -->
+    <script src="music.js"></script>
+</body>
+</html>
